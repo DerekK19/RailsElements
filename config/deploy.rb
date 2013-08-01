@@ -13,8 +13,8 @@ set :repository,  "git@github.com:DerekK19/RailsElements.git"
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-role :web, "manderley"							# Your HTTP server, Apache/etc
-role :app, "manderley"							# This may be the same as your `Web` server
+role :web, "localhost"							# Your HTTP server, Apache/etc
+role :app, "localhost"							# This may be the same as your `Web` server
 #role :db,  "mysqlserver", :primary => true		# This is where Rails migrations will run
 #role :db,  "mysqlserver"
 
