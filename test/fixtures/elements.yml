@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  atomic_number: 
+  name: MyString
+  symbol: MyString
+  atomic_group: 
+  period: 
+  atomic_mass: 
+  isotope_number: 
+  boiling_point: 
+  melting_point: 
+  series_id: 
+
+two:
+  atomic_number: 
+  name: MyString
+  symbol: MyString
+  atomic_group: 
+  period: 
+  atomic_mass: 
+  isotope_number: 
+  boiling_point: 
+  melting_point: 
+  series_id: 

@@ -1,0 +1,45 @@
+<h1>Listing elements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Atomic number</th>
+      <th>Name</th>
+      <th>Symbol</th>
+      <th>Atomic group</th>
+      <th>Period</th>
+      <th>Atomic mass</th>
+      <th>Isotope number</th>
+      <th>Boiling point</th>
+      <th>Melting point</th>
+      <th>Series</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @elements.each do |element| %>
+      <tr>
+        <td><%= element.atomic_number %></td>
+        <td><%= element.name %></td>
+        <td><%= element.symbol %></td>
+        <td><%= element.atomic_group %></td>
+        <td><%= element.period %></td>
+        <td><%= element.atomic_mass %></td>
+        <td><%= element.isotope_number %></td>
+        <td><%= element.boiling_point %></td>
+        <td><%= element.melting_point %></td>
+        <td><%= element.series_id %></td>
+        <td><%= link_to 'Show', element %></td>
+        <td><%= link_to 'Edit', edit_element_path(element) %></td>
+        <td><%= link_to 'Destroy', element, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Element', new_element_path %>

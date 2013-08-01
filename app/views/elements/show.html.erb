@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Atomic number:</strong>
+  <%= @element.atomic_number %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @element.name %>
+</p>
+
+<p>
+  <strong>Symbol:</strong>
+  <%= @element.symbol %>
+</p>
+
+<p>
+  <strong>Atomic group:</strong>
+  <%= @element.atomic_group %>
+</p>
+
+<p>
+  <strong>Period:</strong>
+  <%= @element.period %>
+</p>
+
+<p>
+  <strong>Atomic mass:</strong>
+  <%= @element.atomic_mass %>
+</p>
+
+<p>
+  <strong>Isotope number:</strong>
+  <%= @element.isotope_number %>
+</p>
+
+<p>
+  <strong>Boiling point:</strong>
+  <%= @element.boiling_point %>
+</p>
+
+<p>
+  <strong>Melting point:</strong>
+  <%= @element.melting_point %>
+</p>
+
+<p>
+  <strong>Series:</strong>
+  <%= @element.series_id %>
+</p>
+
+<%= link_to 'Edit', edit_element_path(@element) %> |
+<%= link_to 'Back', elements_path %>

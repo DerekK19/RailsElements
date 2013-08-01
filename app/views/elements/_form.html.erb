@@ -1,0 +1,57 @@
+<%= form_for(@element) do |f| %>
+  <% if @element.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@element.errors.count, "error") %> prohibited this element from being saved:</h2>
+
+      <ul>
+      <% @element.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :atomic_number %><br>
+    <%= f.text_field :atomic_number %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :symbol %><br>
+    <%= f.text_field :symbol %>
+  </div>
+  <div class="field">
+    <%= f.label :atomic_group %><br>
+    <%= f.text_field :atomic_group %>
+  </div>
+  <div class="field">
+    <%= f.label :period %><br>
+    <%= f.text_field :period %>
+  </div>
+  <div class="field">
+    <%= f.label :atomic_mass %><br>
+    <%= f.text_field :atomic_mass %>
+  </div>
+  <div class="field">
+    <%= f.label :isotope_number %><br>
+    <%= f.text_field :isotope_number %>
+  </div>
+  <div class="field">
+    <%= f.label :boiling_point %><br>
+    <%= f.text_field :boiling_point %>
+  </div>
+  <div class="field">
+    <%= f.label :melting_point %><br>
+    <%= f.text_field :melting_point %>
+  </div>
+  <div class="field">
+    <%= f.label :series_id %><br>
+    <%= f.text_field :series_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
