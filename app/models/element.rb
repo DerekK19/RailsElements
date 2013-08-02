@@ -1,7 +1,9 @@
 class Element < ActiveRecord::Base
 
-  default_scope order('id ASC')
+  // Sort the records on atomic number
+  default_scope order('atomic_number ASC')
 
+  // Designate a primary key
   self.primary_key = :id
 
 end
