@@ -13,15 +13,13 @@ module ApplicationHelper
 
 	def navbar_items
 		[
+			['Elements', 'http://macrails/elements'],
 			['Photos', 'http://rails/photos'],
-			['Elements', 'http://rails/elements'],
-			['M Elements', 'http://macrails/elements'],
-			['LRIC', 'http://rails/LRIC'],
 		]
 	end
 	
 	def current_navbar
-	'M Elements'
+	'Elements'
 	end
 	
 	def current_header
