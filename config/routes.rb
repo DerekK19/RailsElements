@@ -3,6 +3,12 @@ Elements::Application.routes.draw do
 
   resources :series
 
+  resources :about do
+    member do
+      get 'index'
+    end
+  end
+  
   root 'elements#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

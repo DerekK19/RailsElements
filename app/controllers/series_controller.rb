@@ -4,7 +4,7 @@ class SeriesController < ApplicationController
   # GET /series
   # GET /series.json
   def index
-    @series = Series.all
+    @series = Series.display_data(params[:page], params[:sort_by])
   end
 
   # GET /series/1
