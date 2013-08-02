@@ -4,7 +4,7 @@ class ElementsController < ApplicationController
   # GET /elements
   # GET /elements.json
   def index
-    @elements = Element.all
+    @elements = Element.display_data(params[:page], params[:sort_by])
   end
 
   # GET /elements/1
