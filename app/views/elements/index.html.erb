@@ -3,16 +3,16 @@
 <table>
   <thead>
     <tr>
-      <th>Atomic number</th>
-      <th>Name</th>
-      <th>Symbol</th>
-      <th>Atomic group</th>
-      <th>Period</th>
-      <th>Atomic mass</th>
-      <th>Isotope number</th>
-      <th>Boiling point</th>
-      <th>Melting point</th>
-      <th>Series</th>
+      <th><a href="?sort_by=atomic_number">Atomic No</a></th>
+      <th><a href="?sort_by=name">Name</a></th>
+      <th><a href="?sort_by=symbol">Symbol</a></th>
+      <th><a href="?sort_by=atomic_group">Group</a></th>
+      <th><a href="?sort_by=period">Period</a></th>
+      <th><a href="?sort_by=atomic_mass">Atomic mass</a></th>
+      <th><a href="?sort_by=isotope_number">Isotope</a></th>
+      <th><a href="?sort_by=boiling_point">Boiling &#176</a></th>
+      <th><a href="?sort_by=melting_point">Melting &#176</a></th>
+      <th><a href="?sort_by=series_id">Series</a></th>
       <th></th>
       <th></th>
       <th></th>
@@ -22,19 +22,19 @@
   <tbody>
     <% @elements.each do |element| %>
       <tr>
-        <td><%= element.atomic_number %></td>
-        <td><%= element.name %></td>
-        <td><%= element.symbol %></td>
-        <td><%= element.atomic_group %></td>
-        <td><%= element.period %></td>
-        <td><%= element.atomic_mass %></td>
-        <td><%= element.isotope_number %></td>
-        <td><%= element.boiling_point %></td>
-        <td><%= element.melting_point %></td>
-        <td><%= element.series_id %></td>
-        <td><%= link_to 'Show', element %></td>
-        <td><%= link_to 'Edit', edit_element_path(element) %></td>
-        <td><%= link_to 'Destroy', element, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=h element.atomic_number %></td>
+        <td><%=h element.name %></td>
+        <td><%=h element.symbol %></td>
+        <td><%=h element.atomic_group %></td>
+        <td><%=h element.period %></td>
+        <td><%=h element.atomic_mass %></td>
+        <td><%=h element.isotope_number %></td>
+        <td><%=h element.boiling_point %></td>
+        <td><%=h element.melting_point %></td>
+        <td><%=h element.series_id %></td>
+        <td bgcolor="FFFFFF"><%= link_to 'Show', element %></td>
+        <td bgcolor="FFFFFF"><%= link_to 'Edit', edit_element_path(element) %></td>
+        <td bgcolor="FFFFFF"><%= link_to 'Destroy', element, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

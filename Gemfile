@@ -44,3 +44,6 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'rvm-capistrano'
+
+# pagination library
+gem "will_paginate", git: 'https://github.com/mislav/will_paginate.git'
