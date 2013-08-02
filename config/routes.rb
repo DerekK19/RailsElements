@@ -3,7 +3,7 @@ Elements::Application.routes.draw do
 
   resources :series
 
-  map.connect '', :controller => 'elements'
+  connect '', :controller => 'elements'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
