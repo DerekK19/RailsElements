@@ -1,0 +1,28 @@
+<h1>Listing series</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><a href="?sort_by=name">Name</a></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @series.each do |series| %>
+      <tr class="<%= cycle("even","odd")%>">
+        <td><%=h series.series_name %></td>
+        <td bgcolor="FFFFFF"><%= link_to 'Show', series %></td>
+        <td bgcolor="FFFFFF"><%= link_to 'Edit', edit_series_path(series) %></td>
+        <td bgcolor="FFFFFF"><%= link_to 'Destroy', series, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= will_paginate @series %>
+<%= link_to 'New Series', new_series_path %>
