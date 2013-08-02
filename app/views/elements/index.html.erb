@@ -21,7 +21,7 @@
 
   <tbody>
     <% @elements.each do |element| %>
-      <tr>
+      <tr class="<%= cycle("even","odd")%>">
         <td><%=h element.atomic_number %></td>
         <td><%=h element.name %></td>
         <td><%=h element.symbol %></td>
