@@ -1,0 +1,28 @@
+<h1>Listing alternative_names</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><a href="?sort_by=name">Name</a></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alternative_names.each do |alternative_name| %>
+      <tr class="<%= cycle("even","odd")%>">
+        <td><%=h alternative_name.name %></td>
+        <td bgcolor="FFFFFF"><%= link_to 'Show', alternative_name %></td>
+        <td bgcolor="FFFFFF"><%= link_to 'Edit', edit_alternative_name_path(alternative_name) %></td>
+        <td bgcolor="FFFFFF"><%= link_to 'Destroy', alternative_name, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= will_paginate @elements %>
+<%= link_to 'New Alternative name', new_alternative_name_path %>

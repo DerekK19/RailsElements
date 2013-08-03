@@ -1,7 +1,8 @@
 Elements::Application.routes.draw do
-  resources :elements
 
+  resources :elements
   resources :series
+  resources :alternative_names
 
   resources :about do
     member do
