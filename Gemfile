@@ -46,4 +46,4 @@ end
 gem 'rvm-capistrano'
 
 # pagination library
-gem "will_paginate", git: 'https://github.com/mislav/will_paginate.git'
+gem 'will_paginate', git: 'https://github.com/mislav/will_paginate.git'
