@@ -43,7 +43,7 @@ module ApplicationHelper
 	def header(right_text, right_link)
 		rValue ='
 	  <div class="header">
-	    <div class="left-header"><image class="ruby-icon" src="/static/rails.gif"></image></div>
+	    <div class="left-header"><image class="ruby-icon" src="/static/images/rails.gif"></image></div>
 	    <div class="centre-header"><h1>' + current_header + '</h1></div>
 	    <div class="right-header"><a href="' + right_link + '">' + right_text + '</a></div>
 	  </div>
