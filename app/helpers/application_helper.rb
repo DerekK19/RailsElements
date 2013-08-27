@@ -50,12 +50,12 @@ module ApplicationHelper
 	
 	def header(right_text, right_link)
 		site=''
-		navbar_items.each {|x| site += x[0] == current_navbar ? x[0] : ''}
+		navbar_items.each {|x| site += x[0] == current_navbar ? x[1] : ''}
 		rValue ='
 	  <div class="header">
 	    <div class="left-header"><image class="ruby-icon" src="/static/images/rails.gif"></image></div>
 	    <div class="machine-header"><ul>'	    
-	    machine_menu_items.each {|x| rValue += '<li><a href="http://' + x + '/' + site + '">' + x + '</a></li>' }
+	    machine_menu_items.each {|x| rValue += '<li><a href="http:/' + x + '/' + site + '">' + x + '</a></li>' }
 		rValue += '
 	    </ul></div>
 	    <div class="centre-header"><h1>' + current_header + '</h1></div>
