@@ -13,8 +13,9 @@ module ApplicationHelper
 
 	def navbar_items
 		[
-			['Elements', 'http://macrails/elements'],
-			['Photos', 'http://rails/photos'],
+			['Elements', 'elements'],
+			['Photos', 'photos'],
+			['Weather', 'weather'],
 		]
 	end
 	
@@ -52,7 +53,7 @@ module ApplicationHelper
 		
 		navbar_items.each {|x| rValue += x[0] == current_navbar ?
 			('<li><a class="current">' + x[0] + '</a></li>') :
-			('<li><a href="' + x[1] + '">' + (x[0]) + '</a></li>') }
+			('<li><a href="http://' + ENV['SERVER_NAME'] + '/' + x[1] + '">' + (x[0]) + '</a></li>') }
 			
 		rValue += '
 		</ul>
