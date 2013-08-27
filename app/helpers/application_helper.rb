@@ -27,6 +27,13 @@ module ApplicationHelper
 	'Elements On Rails'
 	end
 	
+	def machine_menu_items
+		[
+			'rails',
+			'macrails',
+			'devmacrails'
+		]
+	end
 	def left_menu_items
 		[
 			['Elements', '/elements'],
@@ -42,9 +49,15 @@ module ApplicationHelper
 	end
 	
 	def header(right_text, right_link)
+		site=''
+		navbar_items.each {|x| site += x[0] == current_navbar ? x[0] : ''}
 		rValue ='
 	  <div class="header">
 	    <div class="left-header"><image class="ruby-icon" src="/static/images/rails.gif"></image></div>
+	    <div class="machine-header"><ul>'	    
+	    machine_menu_items.each {|x| rValue += '<li><a href="http://' + x + '/' + site + '">' + x + '</a></li>' }
+		rValue += '
+	    </ul></div>
 	    <div class="centre-header"><h1>' + current_header + '</h1></div>
 	    <div class="right-header"><a href="' + right_link + '">' + right_text + '</a></div>
 	  </div>
@@ -62,10 +75,11 @@ module ApplicationHelper
 	end
 
 	def footer
+	    l = link_to 'Rails', controller: 'rails/info', action: 'properties'
 		'
 		  <div class="footer">
 			<div class="left-footer">Copyright &copy;' + Time.now.year.to_s + ' Derek Knight</div>
-			<div class="right-footer">Powered by Ruby on Rails (' + Rails::env + '). [Ruby ' + RUBY_VERSION + ', Rails ' + Rails::VERSION::STRING + ']</div>
+			<div class="right-footer">Powered by Ruby on ' + l + ' (' + Rails::env + '). [Ruby ' + RUBY_VERSION + ', Rails ' + Rails::VERSION::STRING + ']</div>
 		  </div>
 		'
 	end
