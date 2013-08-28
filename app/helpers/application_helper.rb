@@ -29,9 +29,9 @@ module ApplicationHelper
 	
 	def machine_menu_items
 		[
-			'rails',
-			'macrails',
-			'devmacrails'
+			['rails', 'rails', ''],
+			['macrails', 'macrails', ''],
+			['devmacrails', 'devmacrails:8000', 'dk']
 		]
 	end
 	def left_menu_items
@@ -55,7 +55,7 @@ module ApplicationHelper
 	  <div class="header">
 	    <div class="left-header"><image class="ruby-icon" src="/static/images/rails.gif"></image></div>
 	    <div class="machine-header"><ul>'	    
-	    machine_menu_items.each {|x| rValue += '<li><a href="http:/' + x + '/' + site + '">' + x + '</a></li>' }
+	    machine_menu_items.each {|x| rValue += '<li><a href="http:/' + x[1] + '/' + x[2] + site + '">' + x[0] + '</a></li>' }
 		rValue += '
 	    </ul></div>
 	    <div class="centre-header"><h1>' + current_header + '</h1></div>
@@ -75,7 +75,10 @@ module ApplicationHelper
 	end
 
 	def footer
-	    l = link_to 'Rails', controller: 'rails/info', action: 'properties'
+		l = ''
+		if Rails::env == 'development'
+		    l = link_to 'Rails', controller: 'rails/info', action: 'properties'
+		end
 		'
 		  <div class="footer">
 			<div class="left-footer">Copyright &copy;' + Time.now.year.to_s + ' Derek Knight</div>
