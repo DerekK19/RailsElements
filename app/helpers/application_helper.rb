@@ -31,6 +31,7 @@ module ApplicationHelper
 		[
 			['rails', 'rails', ''],
 			['macrails', 'macrails', ''],
+			['stagemacrails', 'devmacrails', ''],
 			['devmacrails', 'devmacrails:8000', 'dk']
 		]
 	end
@@ -75,7 +76,7 @@ module ApplicationHelper
 	end
 
 	def footer
-		l = ''
+		l = 'Rails'
 		if Rails::env == 'development'
 		    l = link_to 'Rails', controller: 'rails/info', action: 'properties'
 		end
