@@ -1,17 +1,4 @@
-# load '../static/DomainHelper.rb'
-
-module DomainHelper
-
-	def DomainHelper.machine_menu_items
-		[
-			['rails', 'rails', ''],
-			['macrails', 'macrails', ''],
-			['stagemacrails', 'devmacrails', ''],
-			['devmacrails', 'devmacrails:8000', 'dk']
-		]
-	end
-
-end
+load '../static/DomainHelper.rb'
 
 module ApplicationHelper
 	def tableless_page(*args)
