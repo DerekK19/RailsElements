@@ -1,4 +1,17 @@
-load '/LIbrary/WebServer/Rails/static/DomainHelper.rb'
+# load '../static/DomainHelper.rb'
+
+module DomainHelper
+
+	def DomainHelper.machine_menu_items
+		[
+			['rails', 'rails', ''],
+			['macrails', 'macrails', ''],
+			['stagemacrails', 'devmacrails', ''],
+			['devmacrails', 'devmacrails:8000', 'dk']
+		]
+	end
+
+end
 
 module ApplicationHelper
 	def tableless_page(*args)
