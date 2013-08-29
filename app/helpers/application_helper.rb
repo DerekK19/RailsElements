@@ -1,3 +1,5 @@
+load '../static/DomainHelper.rb'
+
 module ApplicationHelper
 	def tableless_page(*args)
 		if args.size == 3
@@ -27,14 +29,6 @@ module ApplicationHelper
 	'Elements On Rails'
 	end
 	
-	def machine_menu_items
-		[
-			['rails', 'rails', ''],
-			['macrails', 'macrails', ''],
-			['stagemacrails', 'devmacrails', ''],
-			['devmacrails', 'devmacrails:8000', 'dk']
-		]
-	end
 	def left_menu_items
 		[
 			['Elements', '/elements'],
@@ -56,7 +50,7 @@ module ApplicationHelper
 	  <div class="header">
 	    <div class="left-header"><image class="ruby-icon" src="/static/images/rails.gif"></image></div>
 	    <div class="machine-header"><ul>'	    
-	    machine_menu_items.each {|x| rValue += '<li><a href="http:/' + x[1] + '/' + x[2] + site + '">' + x[0] + '</a></li>' }
+	    DomainHelper.machine_menu_items.each {|x| rValue += '<li><a href="http:/' + x[1] + '/' + x[2] + site + '">' + x[0] + '</a></li>' }
 		rValue += '
 	    </ul></div>
 	    <div class="centre-header"><h1>' + current_header + '</h1></div>
