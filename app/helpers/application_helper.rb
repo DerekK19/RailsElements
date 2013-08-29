@@ -1,4 +1,4 @@
-load '/Users/Shared/Sites/static/current/DomainHelper.rb'
+load '/LIbrary/WebServer/Rails/static/DomainHelper.rb'
 
 module ApplicationHelper
 	def tableless_page(*args)
