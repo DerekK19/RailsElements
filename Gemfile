@@ -50,3 +50,6 @@ gem 'colored'
 
 # pagination library
 gem 'will_paginate', '~> 3.0'
+
+# static domain content gem
+gem 'static'
