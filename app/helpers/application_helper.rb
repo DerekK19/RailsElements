@@ -43,12 +43,13 @@ module ApplicationHelper
 	
 	def header(right_text, right_link)
 		site=''
-		navbar_items.each {|x| site += x[0] == current_navbar ? x[1] : ''}
+		n = Static::navbar_items[Rails::env]
+		n.each {|x| site += x[0] == current_navbar ? x[1] : ''}
 		rValue ='
 	  <div class="header">
 	    <div class="left-header"><image class="ruby-icon" src="/static/images/rails.gif"></image></div>
-	    <div class="machine-header"><ul>'	    
-	    Static::machine_menu_items.each {|x| rValue += '<li><a href="http:/' + x[1] + '/' + x[2] + site + '">' + x[0] + '</a></li>' }
+	    <div class="machine-header"><ul>'
+	    Static::machine_menu_items.each {|x| rValue += '<li><a href="http:/' + x[1] + '/' + site + '">' + x[0] + '</a></li>' }
 		rValue += '
 	    </ul></div>
 	    <div class="centre-header"><h1>' + current_header + '</h1></div>
@@ -56,11 +57,11 @@ module ApplicationHelper
 	  </div>
 	  <div class="tab-header">
 		<ul id="navbar">'
-		
-		navbar_items.each {|x| rValue += x[0] == current_navbar ?
+
+		n.each {|x| rValue += x[0] == current_navbar ?
 			('<li><a class="current">' + x[0] + '</a></li>') :
 			('<li><a href="http://' + ENV['SERVER_NAME'] + '/' + x[1] + '">' + (x[0]) + '</a></li>') }
-			
+
 		rValue += '
 		</ul>
 	  </div>
