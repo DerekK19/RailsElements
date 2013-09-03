@@ -29,7 +29,7 @@ test:
   password: b50dfc
   host: mysqlserver
 
-stagingh:
+staging:
   adapter: mysql2
   encoding: utf8
   database: elements
