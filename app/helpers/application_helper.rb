@@ -11,14 +11,6 @@ module ApplicationHelper
 	private #methods
 	# =========================================================================
 
-	def navbar_items
-		[
-			['Elements', 'elements'],
-			['Photos', 'photos'],
-			['Weather', 'weather'],
-		]
-	end
-	
 	def current_navbar
 	'Elements'
 	end
