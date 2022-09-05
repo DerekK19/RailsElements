@@ -2,6 +2,9 @@ require "rvm/capistrano"
 require "capistrano/ext/multistage"
 load "config/deploy/progress"
 
+# Default value for :log_level is :debug
+set :log_level, :info
+
 set :stages, ["staging", "production"]
 set :default_stage, "staging"
 
